@@ -36,7 +36,7 @@ $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="ariregister.php">Registri saatmine</a></li>
+                <li><a href="ariregister.php">Register</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
 

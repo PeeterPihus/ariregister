@@ -2,15 +2,29 @@
 ob_start();
 session_start();
 require_once 'dbconnect.php';
-
+require_once 'funktsioon.php';
 if (!isset($_SESSION['userName'])) {
     header("Location: login.php");
     exit;
 }
-// select logged in users detail
+$res = $conn->query("set names utf8");
 $res = $conn->query("SELECT * FROM users WHERE idUser=" . $_SESSION['userName']);
 $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
-
+$rows_raw = $conn->query("SELECT * FROM register");
+foreach ($rows_raw as $row) {
+    $name=getname($row['isikukood']);
+    $rows[] = [
+        'idReg'=>$row['idReg'],
+        'nameReg'=>$name['person_first_name'],
+        'surnameReg'=>$name['person_last_name'],
+        'company'=>$row['company'],
+        'aadress'=>$row['aadress'],
+        'kapital'=>$row['kapital'],
+        'internetAadress'=>$row['internetAadress'],
+        'staatus'=>$row['staatus'],
+        'isikukood'=>$row['isikukood'],
+    ];
+}
 ?>
 <!DOCTYPE html>
 <head>
@@ -36,7 +50,7 @@ $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="ariregister.php">Registri saatmine</a></li>
+                <li class="active"><a href="ariregister.php">Register</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
 
@@ -54,26 +68,40 @@ $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
                 </li>
             </ul>
         </div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Eesnimi</th>
+                <th>Perenimi</th>
+                <th>Isikukood</th>
+                <th>Äri</th>
+                <th>Aadress</th>
+                <th>Kapital</th>
+                <th>Veebileht</th>
+                <th>Staatus</th>
+            </tr>
+            <?php
+            foreach( $rows as $data )
+            {
+                echo "<tr>
+                          <td>".$data['idReg']."</td>
+                          <td>".$data['nameReg']."</td>
+                          <td>".$data['surnameReg']."</td>
+                          <td>".$data['isikukood']."</td>
+                          <td>".$data['company']."</td>
+                          <td>".$data['internetAadress']."</td>
+                          <td>".$data['kapital']."</td>
+                          <td>".$data['aadress']."</td>
+                          <td>".$data['staatus']."</td>
+                       </tr>";
+            }
+            ?>
+
+        </table>
     </div>
 </nav>
 
 
-
-
-<div class="container">
-    <div class="jumbotron">
-
-    </div>
-
-    <div class="row">
-        <div class="col-lg-12">
-            <h2><p><a class="btn btn-primary btn-lg" role="button">Saada register</a></p></h2>
-
-        </div>
-
-
-    </div>
-</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
