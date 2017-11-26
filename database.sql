@@ -30,7 +30,8 @@ CREATE TABLE `register` (
   `aadress` text NOT NULL,
   `kapital` text NOT NULL,
   `internetAadress` text NOT NULL,
-  `staatus` text NOT NULL
+  `staatus` text NOT NULL,
+  `isikukood` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -40,7 +41,7 @@ CREATE TABLE `register` (
 
 LOCK TABLES `register` WRITE;
 /*!40000 ALTER TABLE `register` DISABLE KEYS */;
-INSERT INTO `register` VALUES (1,'firstname','lastname','test_company','test_address','50000€','aadress 2, tartu','Registrisse kantud');
+INSERT INTO `register` VALUES (1,'firstname','lastname','test_company','test_address','50000€','aadress 2, tartu','Registrisse kantud',NULL),(2,'firstname2','lastname2','company2','example.com','10000€','Tallinn 10','Registrisse kantud\r\n',NULL),(3,'John','Lewis','Akamai','http://www.theuselessweb.com/','1000000€','123 6th St. Melbourne, FL 32904','Registrisse kantud','38010050352');
 /*!40000 ALTER TABLE `register` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -82,4 +83,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-20 16:08:47
+-- Dump completed on 2017-11-26 11:22:33
