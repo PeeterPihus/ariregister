@@ -41,7 +41,7 @@ CREATE TABLE `register` (
 
 LOCK TABLES `register` WRITE;
 /*!40000 ALTER TABLE `register` DISABLE KEYS */;
-INSERT INTO `register` VALUES (1,'John','Lewis','Akamai','http://www.theuselessweb.com/','1000000€','123 6th St. Melbourne, FL 32904','Registrisse kantud','38010050352');
+INSERT INTO `register` VALUES (1,'firstname','lastname','test_company','test_address','50000€','aadress 2, tartu','Registrisse kantud',NULL)(2,'firstname2','lastname2','company2','example.com','10000€','Tallinn 10','Registrisse kantud\r\n',NULL),(3,'John','Lewis','Akamai','http://www.theuselessweb.com/','1000000€','123 6th St. Melbourne, FL 32904','Registrisse kantud','38010050352');
 /*!40000 ALTER TABLE `register` ENABLE KEYS */;
 UNLOCK TABLES;
 

@@ -50,11 +50,28 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ariregister.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ariregister.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-204">
+              <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+              <folding>
+                <marker date="1511203233118" expanded="true" signature="240:273" ph="SELECT * FRO... users" />
+                <marker date="1511203233118" expanded="true" signature="378:400" ph="SELECT * FRO... register" />
+                <marker date="1511203233118" expanded="true" signature="885:907" ph="..." />
+                <marker date="1511203233118" expanded="true" signature="885:996" ph="..." />
+                <marker date="1511203233118" expanded="true" signature="1185:1214" ph="..." />
+                <marker date="1511203233118" expanded="true" signature="3243:3787" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="database.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="43" column="51" lean-forward="true" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+            <state relative-caret-position="523">
+              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -367,7 +384,7 @@
       <workItem from="1511528683071" duration="1269000" />
       <workItem from="1511628550874" duration="9000" />
       <workItem from="1511678898234" duration="1778000" />
-      <workItem from="1511685149004" duration="3335000" />
+      <workItem from="1511685149004" duration="4386000" />
     </task>
     <task id="LOCAL-00001" summary="Added data request">
       <created>1511213663809</created>
@@ -397,11 +414,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511688520567</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added data request">
+      <created>1511688596508</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1511688596508</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32482000" />
+    <option name="totallyTimeSpent" value="33533000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="324" y="27" width="1423" height="946" extended-state="0" />
@@ -774,21 +798,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wasd.html" />
     <entry file="file://$PROJECT_DIR$/test.html" />
-    <entry file="file://$PROJECT_DIR$/ariregister.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding>
-            <marker date="1511203233118" expanded="true" signature="240:273" ph="SELECT * FRO... users" />
-            <marker date="1511203233118" expanded="true" signature="378:400" ph="SELECT * FRO... register" />
-            <marker date="1511203233118" expanded="true" signature="885:907" ph="..." />
-            <marker date="1511203233118" expanded="true" signature="885:996" ph="..." />
-            <marker date="1511203233118" expanded="true" signature="1185:1214" ph="..." />
-            <marker date="1511203233118" expanded="true" signature="3243:3787" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -825,14 +834,6 @@
             <marker date="1511187545921" expanded="true" signature="584:621" ph="SELECT email... users" />
             <marker date="1511187545921" expanded="true" signature="864:946" ph="INSERT INTO users... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/funktsioon.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -922,10 +923,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ariregister.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding>
+            <marker date="1511203233118" expanded="true" signature="240:273" ph="SELECT * FRO... users" />
+            <marker date="1511203233118" expanded="true" signature="378:400" ph="SELECT * FRO... register" />
+            <marker date="1511203233118" expanded="true" signature="885:907" ph="..." />
+            <marker date="1511203233118" expanded="true" signature="885:996" ph="..." />
+            <marker date="1511203233118" expanded="true" signature="1185:1214" ph="..." />
+            <marker date="1511203233118" expanded="true" signature="3243:3787" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funktsioon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="43" column="51" lean-forward="true" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+        <state relative-caret-position="523">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
       </provider>
