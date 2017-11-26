@@ -49,3 +49,4 @@ function getname($isikukood)
 
     return $p_data['data'];
 }
+//https://www.iprodev.com/php-easycache/
