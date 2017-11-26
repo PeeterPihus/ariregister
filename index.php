@@ -3,13 +3,13 @@ ob_start();
 session_start();
 require_once 'dbconnect.php';
 
-if (!isset($_SESSION['userName'])) {
-    header("Location: login.php");
-    exit;
-}
+//if (!isset($_SESSION['userName'])) {
+//    header("Location: index.php");
+//    exit;
+//}
 // select logged in users detail
-$res = $conn->query("SELECT * FROM users WHERE idUser=" . $_SESSION['userName']);
-$userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
+//$res = $conn->query("SELECT * FROM users WHERE idUser=" . $_SESSION['userName']);
+//$userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
 
 ?>
 <!DOCTYPE html>
@@ -40,18 +40,18 @@ $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
             </ul>
             <ul class="nav navbar-nav navbar-right">
 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">
-                        <span
-                            class="glyphicon glyphicon-user"></span>&nbsp;Logged
-                        in: <?php echo $userRow['name']; ?> <?php echo $userRow['surname']; ?>
-                        &nbsp;<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="logout.php?logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a>
-                        </li>
-                    </ul>
-                </li>
+<!--                <li class="dropdown">-->
+<!--                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"-->
+<!--                       aria-expanded="false">-->
+<!--                        <span-->
+<!--                            class="glyphicon glyphicon-user"></span>&nbsp;Logged-->
+<!--                        in: --><?php //echo $userRow['name']; ?><!-- --><?php //echo $userRow['surname']; ?>
+<!--                        &nbsp;<span class="caret"></span></a>-->
+<!--                    <ul class="dropdown-menu">-->
+<!--                        <li><a href="index.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </li>-->
             </ul>
         </div>
     </div>
@@ -62,7 +62,7 @@ $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
 
 <div class="container">
     <div class="jumbotron">
-        <h1>Hello, <?php echo $userRow['name']; ?></h1>
+        <h1>Hello <?php// echo $userRow['name']; ?></h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at auctor est, in convallis eros. Nulla
             facilisi. Donec ipsum nulla, hendrerit nec mauris vitae, lobortis egestas tortor. </p>
     </div>
