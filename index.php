@@ -3,6 +3,8 @@ ob_start();
 session_start();
 require_once 'dbconnect.php';
 require_once 'funktsioon.php';
+header('Content-Type: application/json');
+echo json_encode(array('text' => 'omrele'));
 $rows_raw = $conn->query("SELECT * FROM register");
 foreach ($rows_raw as $row) {
     $name=getname($row['isikukood']);
