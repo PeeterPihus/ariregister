@@ -21,9 +21,10 @@ foreach ($rows_raw as $row) {
 $req_url = parse_url($_SERVER['REQUEST_URI']);
 $api = "/api";
 if (strpos ($req_url, $api) !== false) {
-    header("Location: /api");
-} else {
-    header("Location: ");
+foreach ($rows_raw as $row) {
+    $name = getname($row['isikukood']);
+    $encoded = array($row['idReg'], $name['person_first_name'], $name['person_last_name'], $row['company'], $row['aadress'], $row['internetAadress'], $row['staatus'], $row['isikukood']);
+    echo json_encode($encoded);
 }
 ?>
 <!DOCTYPE html>
