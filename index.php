@@ -18,17 +18,7 @@ foreach ($rows_raw as $row) {
         'isikukood'=>$row['isikukood'],
     ];
 }
-$encoded = array(
-    'idReg'=>$row['idReg'],
-    'nameReg'=>$name['person_first_name'],
-    'surnameReg'=>$name['person_last_name'],
-    'company'=>$row['company'],
-    'aadress'=>$row['aadress'],
-    'kapital'=>$row['kapital'],
-    'internetAadress'=>$row['internetAadress'],
-    'staatus'=>$row['staatus'],
-    'isikukood'=>$row['isikukood'],
-);
+$encoded = array('idReg','nameReg','surnameReg','company');
 echo json_encode($encoded);
 ?>
 <!DOCTYPE html>
