@@ -26,7 +26,7 @@ if (strpos ($req_url, $api) !== false) {
         $encoded = array($row['idReg'], $name['person_first_name'], $name['person_last_name'], $row['company'], $row['aadress'], $row['internetAadress'], $row['staatus'], $row['isikukood']);
         echo json_encode($encoded);
     }
-} else : ?>
+}?>
 
 
 <!DOCTYPE html>
@@ -89,5 +89,3 @@ if (strpos ($req_url, $api) !== false) {
 
 </body>
 </html>
-}
-<?php endif; ?>
