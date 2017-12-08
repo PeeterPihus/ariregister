@@ -18,12 +18,17 @@ foreach ($rows_raw as $row) {
         'isikukood'=>$row['isikukood'],
     ];
 }
-foreach ($rows_raw as $row) {
-    $name=getname($row['isikukood']);
-    $encoded = array($row['idReg'], $name['person_first_name'], $name['person_last_name'], $row['company'], $row['aadress'], $row['internetAadress'], $row['staatus'], $row['isikukood']);
-    echo json_encode($encoded);
-}
-?>
+$req_url = parse_url($_SERVER['REQUEST_URI']);
+$api = "/api";
+if (strpos ($req_url, $api) !== false) {
+    foreach ($rows_raw as $row) {
+        $name = getname($row['isikukood']);
+        $encoded = array($row['idReg'], $name['person_first_name'], $name['person_last_name'], $row['company'], $row['aadress'], $row['internetAadress'], $row['staatus'], $row['isikukood']);
+        echo json_encode($encoded);
+    }
+} else {
+
+
 <!DOCTYPE html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -56,7 +61,6 @@ foreach ($rows_raw as $row) {
                 <th>Veebileht</th>
                 <th>Staatus</th>
             </tr>
-            <?php
             foreach( $rows as $data )
             {
                 echo "<tr>
@@ -71,7 +75,7 @@ foreach ($rows_raw as $row) {
                           <td>".$data['staatus']."</td>
                        </tr>";
             }
-            ?>
+
 
         </table>
     </div>
@@ -84,3 +88,5 @@ foreach ($rows_raw as $row) {
 
 </body>
 </html>
+}
+?>
