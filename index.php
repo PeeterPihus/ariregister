@@ -26,10 +26,7 @@ if (strpos ($req_url, $api) !== false) {
         $encoded = array($row['idReg'], $name['person_first_name'], $name['person_last_name'], $row['company'], $row['aadress'], $row['internetAadress'], $row['staatus'], $row['isikukood']);
         echo json_encode($encoded);
     }
-}?>
-
-
-<!DOCTYPE html>
+} else { echo(<!DOCTYPE html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"/>
@@ -61,7 +58,7 @@ if (strpos ($req_url, $api) !== false) {
                 <th>Veebileht</th>
                 <th>Staatus</th>
             </tr>
-            <?php
+            
             foreach( $rows as $data )
             {
                 echo "<tr>
@@ -76,7 +73,7 @@ if (strpos ($req_url, $api) !== false) {
                           <td>".$data['staatus']."</td>
                        </tr>";
             }
-            ?>
+
 
         </table>
     </div>
@@ -89,3 +86,4 @@ if (strpos ($req_url, $api) !== false) {
 
 </body>
 </html>
+)} ?>
