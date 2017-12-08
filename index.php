@@ -29,7 +29,8 @@ if (strpos ($req_url, $api) !== false) {
 } else {
 
 
-echo "<!DOCTYPE html>
+echo '<!DOCTYPE html>';
+?>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"/>
@@ -88,5 +89,4 @@ echo "<!DOCTYPE html>
 <script src="assets/js/bootstrap.min.js"></script>
 
 </body>
-</html>";
-}?>
+</html>
