@@ -21,9 +21,9 @@ foreach ($rows_raw as $row) {
 $req_url = parse_url($_SERVER['REQUEST_URI']);
 $api = "/api";
 if (strpos ($req_url, $api) !== false) {
-    header("Location: api/index.php");
+    header("Location: http://ariregister.vs16.diarainfra.com/api/index.php");
 } else {
-    header("Location: index.php");
+    header("Location: http://ariregister.vs16.diarainfra.com/index.php");
 }
 ?>
 <!DOCTYPE html>
