@@ -20,13 +20,13 @@ foreach ($rows_raw as $row) {
 }
 $req_url = parse_url($_SERVER['REQUEST_URI']);
 $api = "/api";
-if (strpos ($req_url, $api) !== true) {
+if (strpos ($req_url, $api) !== false) {
     foreach ($rows_raw as $row) {
         $name = getname($row['isikukood']);
         $encoded = array($row['idReg'], $name['person_first_name'], $name['person_last_name'], $row['company'], $row['aadress'], $row['internetAadress'], $row['staatus'], $row['isikukood']);
         echo json_encode($encoded);
     }
-} else {
+} else : ?>
 
 
 <!DOCTYPE html>
@@ -61,6 +61,7 @@ if (strpos ($req_url, $api) !== true) {
                 <th>Veebileht</th>
                 <th>Staatus</th>
             </tr>
+            <?php
             foreach( $rows as $data )
             {
                 echo "<tr>
@@ -75,7 +76,7 @@ if (strpos ($req_url, $api) !== true) {
                           <td>".$data['staatus']."</td>
                        </tr>";
             }
-
+            ?>
 
         </table>
     </div>
@@ -89,4 +90,4 @@ if (strpos ($req_url, $api) !== true) {
 </body>
 </html>
 }
-?>
+<?php endif; ?>
