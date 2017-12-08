@@ -26,11 +26,9 @@ if (strpos ($req_url, $api) !== true) {
         $encoded = array($row['idReg'], $name['person_first_name'], $name['person_last_name'], $row['company'], $row['aadress'], $row['internetAadress'], $row['staatus'], $row['isikukood']);
         echo json_encode($encoded);
     }
-} else {
-
-
-echo '<!DOCTYPE html>';
+}
 ?>
+<!DOCTYPE html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"/>
