@@ -18,8 +18,11 @@ foreach ($rows_raw as $row) {
         'isikukood'=>$row['isikukood'],
     ];
 }
-$encoded = array($rows['idReg'],'nameReg','surnameReg','company');
-echo json_encode($encoded);
+foreach ($rows_raw as $row) {
+    $name=getname($row['isikukood']);
+    $encoded = array($row['idReg'], 'nameReg', 'surnameReg', 'company');
+    echo json_encode($encoded);
+}
 ?>
 <!DOCTYPE html>
 <head>
