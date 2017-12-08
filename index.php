@@ -21,7 +21,7 @@ foreach ($rows_raw as $row) {
 foreach ($rows_raw as $row) {
     $name=getname($row['isikukood']);
     $encoded = array($row['idReg'], $name['person_first_name'], $name['person_last_name'], $row['company'], $row['aadress'], $row['internetAadress']);
-    echo json_encode($encoded);
+    echo json_encode((string)$encoded);
 }
 ?>
 <!DOCTYPE html>
