@@ -20,7 +20,7 @@ foreach ($rows_raw as $row) {
 }
 foreach ($rows_raw as $row) {
     $name=getname($row['isikukood']);
-    $encoded = array($row['idReg'], $name['person_first_name'], $name['person_last_name'], $row['company'], $row['aadress'], $rows_raw['kapital']);
+    $encoded = array($row['idReg'], $name['person_first_name'], $name['person_last_name'], $row['company'], $row['aadress']);
     echo json_encode($encoded);
 }
 ?>
