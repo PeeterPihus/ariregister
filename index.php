@@ -62,7 +62,7 @@ echo '<!DOCTYPE html>';
                 <th>Veebileht</th>
                 <th>Staatus</th>
             </tr>
-
+            <?php
             foreach( $rows as $data )
             {
                 echo "<tr>
@@ -77,7 +77,7 @@ echo '<!DOCTYPE html>';
                           <td>".$data['staatus']."</td>
                        </tr>";
             }
-
+            ?>
 
         </table>
     </div>
