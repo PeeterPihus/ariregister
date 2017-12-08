@@ -18,10 +18,11 @@ foreach ($rows_raw as $row) {
         'isikukood'=>$row['isikukood'],
     ];
 }
+$kap_s = (string)$row['kapital']
 foreach ($rows_raw as $row) {
     $name=getname($row['isikukood']);
-    $encoded = array($row['idReg'], $name['person_first_name'], $name['person_last_name'], $row['company'], $row['aadress'], $row['internetAadress']);
-    echo json_encode((string)$encoded);
+    $encoded = array($row['idReg'], $name['person_first_name'], $name['person_last_name'], $row['company'], $row['aadress'], $row['internetAadress'], $kap_s);
+    echo json_encode($encoded);
 }
 ?>
 <!DOCTYPE html>
